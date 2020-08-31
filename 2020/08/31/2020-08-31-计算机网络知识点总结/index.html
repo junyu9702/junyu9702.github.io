@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>计算机网络知识点总结 - 笔记</title><meta description="1. Https加密过程  客户端发起握手请求； 服务端返回已有的证书公钥（服务端通过CA认证后，拥有证书公钥和证书私钥）； 客户端验证证书是否有效； 若证书有效，则生成一个随机数； 用证书公钥加密生成的随机数； 将加密后的密钥发送给服务端； 服务端用证书私钥解密密钥； 服务端使用解密出的密钥加密要发送的内容并发送给客户端； 客户端使用秘钥解密信息。  2. 对称加密与非对称加密 对称加密：加密和"><meta property="og:type" content="blog"><meta property="og:title" content="计算机网络知识点总结"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="笔记"><meta property="og:description" content="1. Https加密过程  客户端发起握手请求； 服务端返回已有的证书公钥（服务端通过CA认证后，拥有证书公钥和证书私钥）； 客户端验证证书是否有效； 若证书有效，则生成一个随机数； 用证书公钥加密生成的随机数； 将加密后的密钥发送给服务端； 服务端用证书私钥解密密钥； 服务端使用解密出的密钥加密要发送的内容并发送给客户端； 客户端使用秘钥解密信息。  2. 对称加密与非对称加密 对称加密：加密和"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2020-08-31T08:40:10.000Z"><meta property="article:modified_time" content="2020-08-31T11:29:22.569Z"><meta property="article:author" content="Junyu Bian"><meta property="article:tag" content="计算机网络"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2020/08/31/2020-08-31-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"},"headline":"笔记","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2020-08-31T08:40:10.000Z","dateModified":"2020-08-31T11:29:22.569Z","author":{"@type":"Person","name":"Junyu Bian"},"description":"1. Https加密过程  客户端发起握手请求； 服务端返回已有的证书公钥（服务端通过CA认证后，拥有证书公钥和证书私钥）； 客户端验证证书是否有效； 若证书有效，则生成一个随机数； 用证书公钥加密生成的随机数； 将加密后的密钥发送给服务端； 服务端用证书私钥解密密钥； 服务端使用解密出的密钥加密要发送的内容并发送给客户端； 客户端使用秘钥解密信息。  2. 对称加密与非对称加密 对称加密：加密和"}</script><link rel="canonical" href="http://yoursite.com/2020/08/31/2020-08-31-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"><link rel="icon" href="/img/%E8%BE%B9.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/%E7%AC%94%E8%AE%B0.png" alt="笔记" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-08-31T08:40:10.000Z" title="2020-08-31T08:40:10.000Z">2020-08-31</time><span class="level-item"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></span><span class="level-item">12 minutes read (About 1861 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">计算机网络知识点总结</h1><div class="content"><h3 id="1-Https加密过程"><a href="#1-Https加密过程" class="headerlink" title="1. Https加密过程"></a>1. Https加密过程</h3><hr>
+<ol>
+<li>客户端发起握手请求；</li>
+<li>服务端返回已有的<code>证书公钥</code>（服务端通过CA认证后，拥有<code>证书公钥</code>和<code>证书私钥</code>）；</li>
+<li>客户端验证证书是否有效；</li>
+<li>若证书有效，则生成一个<code>随机数</code>；</li>
+<li>用<code>证书公钥</code>加密生成的随机数；</li>
+<li>将加密后的<code>密钥</code>发送给服务端；</li>
+<li>服务端用<code>证书私钥</code>解密密钥；</li>
+<li>服务端使用解密出的密钥加密要发送的内容并发送给客户端；</li>
+<li>客户端使用秘钥解密信息。</li>
+</ol>
+<h3 id="2-对称加密与非对称加密"><a href="#2-对称加密与非对称加密" class="headerlink" title="2. 对称加密与非对称加密"></a>2. 对称加密与非对称加密</h3><hr>
+<p>对称加密：加密和解密使用同一个密钥；</p>
+<p>非对称加密：使用公钥和私钥进行加解密。</p>
+<hr>
+<h3 id="3-CLOSE-WAIT和TIME-WAIT"><a href="#3-CLOSE-WAIT和TIME-WAIT" class="headerlink" title="3. CLOSE_WAIT和TIME_WAIT"></a>3. CLOSE_WAIT和TIME_WAIT</h3><hr>
+<p>在四次挥手中，</p>
+<p>CLOSE_WAIT：服务端收到FIN后，发送ACK给客户端，之后进入CLOSE_WAIT状态；</p>
+<p>TIME_WAIT：客户端收到FIN后，发送ACK给服务端，之后进入TIME_WAIT状态。</p>
+<hr>
+<h3 id="4-TCP如何保证传输可靠性"><a href="#4-TCP如何保证传输可靠性" class="headerlink" title="4. TCP如何保证传输可靠性"></a>4. TCP如何保证传输可靠性</h3><hr>
+<ol>
+<li>数据包校验；</li>
+<li>重排序：TCP将失序数据进行重新排序后才交给应用层；</li>
+<li>应答机制：回复ACK；</li>
+<li>超时重传；</li>
+<li>流量控制：TCP连接的每一方都有固定大小缓冲空间，通过可变大小的华创协议完成。</li>
+</ol>
+<p>现已实现的程序有RUDP、RTP、UDT。</p>
+<hr>
+<h3 id="5-如何预防TCP的DDos攻击"><a href="#5-如何预防TCP的DDos攻击" class="headerlink" title="5.如何预防TCP的DDos攻击"></a>5.如何预防TCP的DDos攻击</h3><hr>
+<ol>
+<li><p>限制同时打开SYN半链接的数目；</p>
+<p>方法：在注册表中对TCPMaxHalfOpen相关参数进行调整；</p>
+<p>TCPMaxHalfOpen相关参数：</p>
+<pre><code>1. SynAttackProtect：决定了系统受到SYN攻击时采取的保护措施，包括减少系统SYN+ACK的重试次数等；
+ 2. TcpMaxHalfOpen：系统允许同时打开的半链接值；
+ 3. TcpMaxHalfOpenRetried：决定在什么情况下系统打开SYN攻击保护；</code></pre></li>
+<li><p>缩短SYN半链接的Time out时间；</p>
+</li>
+</ol>
+<hr>
+<h3 id="6-TCP如何实现拥塞控制"><a href="#6-TCP如何实现拥塞控制" class="headerlink" title="6. TCP如何实现拥塞控制"></a>6. TCP如何实现拥塞控制</h3><hr>
+<ol>
+<li>慢启动：以指数方式，由小到大逐渐增加拥塞窗口(cwnd)的大小，慢启动达到ssthresh阈值则进入拥塞避免；</li>
+<li>拥塞避免：每经过一个往返时间RTT就把发送方拥塞窗口增加1，按照线性增长，发生拥塞，cwnd降为1，重新慢启动；</li>
+<li>快重传：接收方收到失序报文后，立即发出重复确认，发送方收到三个连续重复确认则立即重传；</li>
+<li>快恢复：发送放收到重复确认后，执行<code>乘法减小</code> ，把ssthresh减半，但不执行慢开始，因为如果发生阻塞，不会收到多个重复确认，而是将cwnd设置为ssthresh大小进行拥塞避免。</li>
+</ol>
+<hr>
+<h3 id="7-从输入网址到获得页面的过程"><a href="#7-从输入网址到获得页面的过程" class="headerlink" title="7. 从输入网址到获得页面的过程"></a>7. 从输入网址到获得页面的过程</h3><hr>
+<ol>
+<li>浏览器通过DNS查询对应IP地址：<ol>
+<li>浏览器搜索自身DNS缓存；</li>
+<li>搜索操作系统DNS缓存；</li>
+<li>向本地DNS服务器进行查询；</li>
+<li>若不在本地域名服务器，则递归或迭代查询：<ol>
+<li>递归查询：服务器作为DNS客户向根服务器查询；</li>
+<li>迭代查询：根服务器告知服务器需要查询的IP，服务器自己进行查询；</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>获取IP地址后，浏览器向服务器请求建立连接，发起三次握手；</li>
+<li>TCP连接建立后，浏览器向服务器发送HTTP请求；</li>
+<li>浏览器对请求进行处理，并将处理结果返回给浏览器；</li>
+<li>浏览器进行渲染，呈现页面给用户。</li>
+</ol>
+<hr>
+<h3 id="8-Session-与-Cookie"><a href="#8-Session-与-Cookie" class="headerlink" title="8. Session 与 Cookie"></a>8. Session 与 Cookie</h3><hr>
+<p><strong>Session</strong>：</p>
+<pre><code>1. 用户访问服务器时，服务器首先检查请求中是否包含sessionId，若包含，说明session已创建，若不包含，则为用户建立一个session并分配sessionId（依赖Cookie）；
+ 2. 用户提交表单时，浏览器将用户的SessionId附在HTTP头信息中，服务器处理完表单将结果返回sessionId对应的用户；
+ 3. 若Cookie被禁用：
+      1. URL重写：直接将sessionId附在URL后；
+      2. 表单隐藏字段：修改表单，添加一个隐藏字段，以便提交时能够回传sessionId
+4. session共享：修改cookie的域名为父域名；
+5. 使用场景：购物车；</code></pre><p><strong>Cookie</strong>：</p>
+<ol>
+<li>若服务器需要记录用户状态，则使用response向客户端颁发一个cookie，再次请求时，浏览器将请求网址连同cookie一起提交给服务器；</li>
+<li>会话Cookie和持久Cookie：<ol>
+<li>会话cookie：不设置过期时间，关闭浏览器窗口，cookie就消失，一般保存在内存里而不是硬盘上；</li>
+<li>持久cookie：设置了过期时间，cookie有效指导超过了设定的过期时间，一般存储在硬盘上；</li>
+</ol>
+</li>
+<li>使用场景：登录网站。</li>
+</ol>
+<hr>
+<h3 id="9-七层网络体系结构"><a href="#9-七层网络体系结构" class="headerlink" title="9. 七层网络体系结构"></a>9. 七层网络体系结构</h3><hr>
+<ol>
+<li>物理层：实现相邻计算机节点之间比特流透明传送；</li>
+<li>数据链路层：接手物理层的位流行驶数据，封装成帧，传送到上一层，同样，也将上一层的数据帧，拆装成位流转发到物理层；</li>
+<li>网络层：将网络地址翻译为对应的物理地址，并通过路由算法选择最佳路径；</li>
+<li>传输层：为不同主机上运行的进程提供逻辑通信；<ol>
+<li>区别于网络层：网络层完成主机间的逻辑通信，传输层完成应用进程间的逻辑通信；</li>
+</ol>
+</li>
+<li>会话层：应用程序与网络之间的接口，负责在网络中的两节点之间简历、维持和终止通信；</li>
+<li>表示层：对来自应用层的命令和数据进行解释；</li>
+<li>应用层：为用户的应用进程提供网络通信服务。</li>
+</ol>
+<hr>
+<h3 id="10-TCP和UDP对应的常见应用层协议"><a href="#10-TCP和UDP对应的常见应用层协议" class="headerlink" title="10. TCP和UDP对应的常见应用层协议"></a>10. TCP和UDP对应的常见应用层协议</h3><ol>
+<li>TCP：<ol>
+<li>FTP：文件传输协议；</li>
+<li>Telnet：用于远程登录的端口：<ol>
+<li>和ssh的区别：<ol>
+<li>telnet为明文传送，ssh为加密传送；</li>
+<li>ssh使用公钥对服务器的用户进行身份验证，telnet没有使用公钥；</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>SMTP：邮件传送协议，用于发送邮件；</li>
+<li>POP3：用于接收邮件；</li>
+<li>HTTP；</li>
+</ol>
+</li>
+<li>UDP：<ol>
+<li>DNS：域名解析服务；</li>
+<li>SNMP：网络管理协议，用于管理网络设备；</li>
+<li>TFTP：简单文件传输协议。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="11-ARP"><a href="#11-ARP" class="headerlink" title="11. ARP"></a>11. ARP</h3><hr>
+<ol>
+<li>将IP地址转换为MAC地址；</li>
+<li>网络通过帧进行传输，帧里面需要目标主机的MAC地址。</li>
+</ol>
+<hr>
+<h3 id="12-常见状态码"><a href="#12-常见状态码" class="headerlink" title="12. 常见状态码"></a>12. 常见状态码</h3><hr>
+<p>1XX：请求已被接受，正在处理；</p>
+<p>2XX：请求成功被处理；</p>
+<p>3XX：重定向：</p>
+<p>​    301：永久性转移；</p>
+<p>​    302：暂时性转移；</p>
+<p>​    304：已缓存；</p>
+<p>4XX：客户端请求不合法：</p>
+<p>​    400：请求语法有问题；</p>
+<p>​    403：拒绝请求；</p>
+<p>​    404：客户端所访问的页面不存在；</p>
+<p>5XX：服务器不能处理合法请求：</p>
+<p>​    500：服务器内部错误；</p>
+<p>​    503：服务暂时不可用。</p>
+</div><div class="article-tags size-small is-uppercase mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/07/23/2020-07-23-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86-6/"><span class="level-item">知识点整理-6</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="" src="/img/avatar.png" alt="Junyu Bian"></figure><p class="title is-size-4 is-block line-height-inherit">Junyu Bian</p><p class="is-size-6 is-block">Student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>New York</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">15</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/JYBian" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/JYBian"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"><span class="level-start"><span class="level-item">知识点</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-31T08:40:10.000Z">2020-08-31</time></p><p class="title is-6"><a class="link-muted" href="/2020/08/31/2020-08-31-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">计算机网络知识点总结</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-23T14:54:16.000Z">2020-07-23</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/23/2020-07-23-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86-6/">知识点整理-6</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-17T11:28:00.000Z">2020-05-17</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/17/2020-05-17-SWAP-Function/">SWAP Function</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Algorithm/">Algorithm</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T01:39:00.000Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/2020-05-16-emplace_back-in-C++/">EMPLACE_BACK in C++</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Algorithm/">Algorithm</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-04-28T14:59:02.000Z">2020-04-28</time></p><p class="title is-6"><a class="link-muted" href="/2020/04/28/2020-04-28-Insurance-Management-System---Overview/">Insurance Management System - Overview</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Web/">Web</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/08/"><span class="level-start"><span class="level-item">August 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">July 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">April 2020</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Algorithm/"><span class="tag">Algorithm</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag is-grey-lightest">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Database/"><span class="tag">Database</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Django/"><span class="tag">Django</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web/"><span class="tag">Web</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="tag">操作系统</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B5%8B%E8%AF%95/"><span class="tag">测试</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="tag">计算机网络</span><span class="tag is-grey-lightest">6</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/%E7%AC%94%E8%AE%B0.png" alt="笔记" height="28"></a><p class="size-small"><span>&copy; 2020 Junyu Bian</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://yoursite.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to Top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
