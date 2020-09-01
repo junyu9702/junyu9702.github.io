@@ -1,5 +1,207 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>笔记</title><meta property="og:type" content="blog"><meta property="og:title" content="笔记"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="笔记"><meta property="og:locale" content="en_US"><meta property="article:author" content="Junyu Bian"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com"},"headline":"笔记","image":["http://yoursite.com/img/og_image.png"],"author":{"@type":"Person","name":"Junyu Bian"},"description":""}</script><link rel="icon" href="/img/%E8%BE%B9.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/%E7%AC%94%E8%AE%B0.png" alt="笔记" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-08-31T11:32:21.000Z" title="2020-08-31T11:32:21.000Z">2020-08-31</time><span class="level-item"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></span><span class="level-item">10 minutes read (About 1427 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/08/31/2020-08-31-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">操作系统知识点总结</a></h1><div class="content"><h3 id="1-进程和线程"><a href="#1-进程和线程" class="headerlink" title="1. 进程和线程"></a>1. 进程和线程</h3><hr>
+<html lang="en"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>笔记</title><meta property="og:type" content="blog"><meta property="og:title" content="笔记"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="笔记"><meta property="og:locale" content="en_US"><meta property="article:author" content="Junyu Bian"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com"},"headline":"笔记","image":["http://yoursite.com/img/og_image.png"],"author":{"@type":"Person","name":"Junyu Bian"},"description":""}</script><link rel="icon" href="/img/%E8%BE%B9.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/%E7%AC%94%E8%AE%B0.png" alt="笔记" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-09-01T09:22:16.000Z" title="2020-09-01T09:22:16.000Z">2020-09-01</time><span class="level-item"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></span><span class="level-item">15 minutes read (About 2308 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/09/01/2020-09-01-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">数据库知识点总结</a></h1><div class="content"><h3 id="1-数据库范式"><a href="#1-数据库范式" class="headerlink" title="1. 数据库范式"></a>1. 数据库范式</h3><hr>
+<p>第一范式：列不可分；</p>
+<p>第二范式：有主键，保证完全依赖于主键；</p>
+<p>第三范式：无传递依赖。    </p>
+<h3 id="2-索引"><a href="#2-索引" class="headerlink" title="2. 索引"></a>2. 索引</h3><hr>
+<p>索引：对数据库表中一个或多个列的值进行排序的数据结构，从而达到快速查询、更新数据库表数据的目的；</p>
+<p>实现：通常使用B树或B+树，如用B树可以实现O(logn)的时间复杂度检索：</p>
+<ol>
+<li>B树特点（m叉树）：<ol>
+<li>树中每个节点最多有m个子节点；</li>
+<li>所有叶子节点都在同一层；</li>
+</ol>
+</li>
+<li>B+树特点（InnoDB的索引实现）：<ol>
+<li>所有叶子节点中包含了所有关键码信息，及指向关键码记录的指针；</li>
+<li>叶子节点本身根据关键码大小自小而大顺序链接；</li>
+<li>含有两个指针，一个指向根节点，一个指向关键字最小的叶子节点；</li>
+</ol>
+</li>
+<li>B+树更适合文件和数据库索引的原因：<ol>
+<li>B+树内部节点相对B树更小，磁盘读写代价更低；</li>
+<li>每次查找都需要从根节点到叶子节点，查询效率更稳定；</li>
+</ol>
+</li>
+</ol>
+<p>索引的优点：</p>
+<ol>
+<li>加快数据检索速度；</li>
+<li>加快表与表之间的连接；</li>
+<li>减少分组和排序语句的时间；</li>
+<li>通过创建唯一性索引，保证数据库中每一行数据的唯一性；</li>
+</ol>
+<p>设置了索引但是无法使用的情况：</p>
+<ol>
+<li>模糊查询，以“%”开头的Like语句；</li>
+<li>OR语句前后没有同时使用索引；</li>
+<li>数据类型出现隐式转化，如varchar不加单引号自动转为int；</li>
+<li>对于多列索引，必须满足最左匹配原则：<ol>
+<li>如对于索引(a, b, c)，生效情况为a、(a, b)、(a, b, c)；</li>
+<li>因为针对联合索引构建的B+树优先保证最左元素有序；</li>
+</ol>
+</li>
+</ol>
+<p>什么字段适合创建索引：</p>
+<ol>
+<li>经常作为查询选择的字段；</li>
+<li>经常作为表连接的字段；</li>
+<li>经常出现在order by、group by、distinct后面的字段；</li>
+</ol>
+<p>创建索引时需要注意：</p>
+<ol>
+<li>非空字段：需要使用0或特殊值代替NULL，否则会使索引运算更加复杂；</li>
+<li>索引字段越小越好：数据库存储以页为单位，一页存储的数据越多，一次IO获取数据的效率越高；</li>
+</ol>
+<p>索引缺点：</p>
+<ol>
+<li>时间：创建、维护索引需要耗费时间，对表中数据进行增加、删除、修改时，索引也要动态修改，降低了数据的维护速度；</li>
+<li>空间：索引需要额外的存储空间；</li>
+</ol>
+<p>索引的分类：</p>
+<ol>
+<li>普通索引和唯一性索引：索引列值的唯一性；</li>
+<li>单个索引和复合索引：索引列包含的列数；</li>
+<li>聚簇索引和非聚簇索引：<ol>
+<li>聚簇索引：按照每张表的主键构建一个B+树，InnoDB中表数据文件本身就是按照B+树组织的索引结构；</li>
+<li>非聚簇索引：按照value进行检索，最后获得想要数据的主键，再通过主索引进行检索；</li>
+</ol>
+</li>
+</ol>
+<p>唯一索引与主键索引：</p>
+<ol>
+<li>主键索引：为主键创建的唯一索引；</li>
+<li>唯一索引：索引列的值必须唯一，但允许有空值。</li>
+</ol>
+<p>非对称加密：使用公钥和私钥进行加解密。</p>
+<hr>
+<h3 id="3-数据库事务"><a href="#3-数据库事务" class="headerlink" title="3. 数据库事务"></a>3. 数据库事务</h3><hr>
+<p>事务的特性：</p>
+<ol>
+<li>原子性（Atomicity）：事务所包含的一系列语句，要么全部成功执行，要么全部回滚；</li>
+<li>一致性（Consistency）：事务的执行结果必须使数据库从一个一致性状态到领一个一致性状态；</li>
+<li>隔离性（Isolation）：并发执行的并发之间不能相互影响；</li>
+<li>持久性（Durability）：事务一旦提交，对数库中的数据改变是永久性的；</li>
+</ol>
+<p>事务并发带来的问题：</p>
+<ol>
+<li>脏读：一个事务读取了另一个事务未提交的数据；</li>
+<li>不可重复读：同样条件下，两次读取结果不同，即，被读取的数据可以被其他事务修改；</li>
+<li>幻读：同样条件下，两次读出的记录数不一样，即，被读取的数据可以被其他事务新增或删除；</li>
+</ol>
+<p>隔离级别：</p>
+<ol>
+<li>读未提交（Read Uncommitted）：允许一个事务读取另一个事务还没提交的数据，可能会提高性能，但是会导致脏读；</li>
+<li>读已提交（Read Committed）：只允许读到其他事物已经提交的数据，不能避免不可重复读；</li>
+<li>可重复读（Repeatable Read）：一个事务开启后，其他事务对于数据库的修改在本事务中不可见，直到本事务提交或回滚，但是，其他事物的删除新增可见，不能避免幻读的问题；</li>
+<li>串行化（Serializable）：只允许事务串行执行；</li>
+<li>MySQL默认隔离级别是Repeatable Read。</li>
+</ol>
+<hr>
+<h3 id="4-MySQL的优化"><a href="#4-MySQL的优化" class="headerlink" title="4. MySQL的优化"></a>4. MySQL的优化</h3><hr>
+<p>SQL语句及索引的优化：</p>
+<ol>
+<li>SQL语句的优化：<ol>
+<li>通过慢查询日志，找出IO大的SQL、未命中索引的SQL，从而进行优化；</li>
+<li>通过explain了解MySQL对于语句的处理，若扩展列extra出现Using filesort和Using temporay表示SQL需要优化；</li>
+<li>其他tips：<ol>
+<li>优化insert语句：一次插入多值；</li>
+<li>避免在where子句中使用!=或&lt;&gt;，以及避免在where子句中对字段进行null值判断，否则引擎会放弃使用索引而进行全表扫描；</li>
+<li>优化嵌套查询：使用join代替子查询；</li>
+<li>考虑用exists代替in；</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>索引优化：<ol>
+<li>在经常做查询选择的字段、表连接的字段、经常出现在order by/group by/distincy后的字段中建立索引；</li>
+<li>避免索引失效；</li>
+</ol>
+</li>
+<li>表结构的优化：<ol>
+<li>选择合适的数据类型：<ol>
+<li>尽量选择较小的数据类型；</li>
+<li>尽量使用简单的数据类型，int比varchar容易处理；</li>
+<li>尽可能使用非空定义字段；</li>
+<li>尽量避免使用text类型，非用不可需考虑分表；</li>
+</ol>
+</li>
+<li>表的范式优化；</li>
+<li>垂直拆分和水平拆分：<ol>
+<li>垂直拆分：将表按照业务分类，分不到不同的数据库上，将数据压力分担到不同库上面；</li>
+<li>水平拆分：将同一张表中的数据拆分到不同数据库中进行存储，或者把一张表拆分成多张小表；</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="5-drop、delete和truncate区别"><a href="#5-drop、delete和truncate区别" class="headerlink" title="5. drop、delete和truncate区别"></a>5. drop、delete和truncate区别</h3><hr>
+<ol>
+<li>delete：<ol>
+<li>用来删除表的全部或一部分数据行；</li>
+<li>需要提交或回滚来执行或撤销删除操作；</li>
+</ol>
+</li>
+<li>truncate：<ol>
+<li>删除表中所有数据；</li>
+<li>不可回滚；</li>
+<li>比delete更快，占用空间更小；</li>
+</ol>
+</li>
+<li>drop：<ol>
+<li>删除表、所有数据行、索引等；</li>
+<li>不可回滚；</li>
+</ol>
+</li>
+<li>总结：不需要一张表的时候，用drop；想删除部分数据行时，用delete；保留表结构但删除所有数据时，用truncate。</li>
+</ol>
+<hr>
+<h3 id="6-悲观锁与乐观锁"><a href="#6-悲观锁与乐观锁" class="headerlink" title="6. 悲观锁与乐观锁"></a>6. 悲观锁与乐观锁</h3><hr>
+<ol>
+<li>悲观锁：<ol>
+<li>先获取锁在进行业务操作；</li>
+<li>通过select … for update来实现，在当前事务结束时自动释放；</li>
+<li>MySQL中使用2.时所有扫描过的行都会上锁，需要确认使用了索引而不是全表扫描；</li>
+</ol>
+</li>
+<li>乐观锁：<ol>
+<li>先进行业务操作，最后更新时检查是否被更新，若未被更新，则更新成功，否则失败重试；</li>
+<li>依靠逻辑实现；</li>
+<li>在业务操作前获取需要锁的数据的版本号，更新时进行对比；</li>
+</ol>
+</li>
+<li>应用场景：<ol>
+<li>读多写少适合乐观锁；</li>
+<li>读少写多适合悲观锁。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="7-MySQL中MyISAM和InnoDB的差异"><a href="#7-MySQL中MyISAM和InnoDB的差异" class="headerlink" title="7. MySQL中MyISAM和InnoDB的差异"></a>7. MySQL中MyISAM和InnoDB的差异</h3><hr>
+<ol>
+<li>存储结构：<ol>
+<li>MyISAM存储为：.frm文件存储表定义、.MYD数据文件、.MYI索引文件；</li>
+<li>InnoDB都保存在同一个数据文件中；</li>
+</ol>
+</li>
+<li>存储空间：<ol>
+<li>MyISAM可被压缩，占据的存储空间较小；</li>
+<li>InnoDB需要更多内存和存储，会在主内存中建立专用的缓冲池，用于高速缓冲数据和索引；</li>
+</ol>
+</li>
+<li>事务支持：<ol>
+<li>MyISAM每次查询具有原子性，执行速度比InnoDB更快，但是不支持事务；</li>
+<li>InnoDB支持事务、外键，具有事务提交、回滚等能力；</li>
+</ol>
+</li>
+<li>表锁差异：<ol>
+<li>MyISAM只支持表级锁，CRUD时会自动给表加锁；</li>
+<li>InnoDB支持行级锁，在where主键时生效，非主键锁全表。</li>
+</ol>
+</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-08-31T11:32:21.000Z" title="2020-08-31T11:32:21.000Z">2020-08-31</time><span class="level-item"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></span><span class="level-item">10 minutes read (About 1427 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/08/31/2020-08-31-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">操作系统知识点总结</a></h1><div class="content"><h3 id="1-进程和线程"><a href="#1-进程和线程" class="headerlink" title="1. 进程和线程"></a>1. 进程和线程</h3><hr>
 <ol>
 <li>进程：系统进行资源分配的基本单位；</li>
 <li>线程：CPU调度的基本单位：<ol>
@@ -687,28 +889,7 @@
 <td>Stable</td>
 </tr>
 </tbody></table>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-04-19T16:51:32.000Z" title="2020-04-19T16:51:32.000Z">2020-04-20</time><span class="level-item"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></span><span class="level-item">a minute read (About 183 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/04/20/2020-04-19-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86-5/">知识点整理-5</a></h1><div class="content"><h3 id="1-MySQL查询10-20条的数据"><a href="#1-MySQL查询10-20条的数据" class="headerlink" title="1. MySQL查询10-20条的数据"></a>1. MySQL查询10-20条的数据</h3><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from table limit 10, 20</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="2-查找二叉树最大深度"><a href="#2-查找二叉树最大深度" class="headerlink" title="2. 查找二叉树最大深度"></a>2. 查找二叉树最大深度</h3><hr>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> val;</span><br><span class="line">  TreeNode * left;</span><br><span class="line">  TreeNode * right;</span><br><span class="line">  TreeNode(<span class="keyword">int</span> x) : val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>)&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span> <span class="params">(TreeNode * root, <span class="keyword">int</span> result)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">int</span> left_res = dfs(root-&gt;left, result + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">int</span> right_res = dfs(root-&gt;right, result + <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">max</span>(left_res, right_res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">MaxDepth</span><span class="params">(TreeNode * root)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> dfs(root, result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="3-判断IP地址是否合法"><a href="#3-判断IP地址是否合法" class="headerlink" title="3. 判断IP地址是否合法"></a>3. 判断IP地址是否合法</h3><hr>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::xpressive;  </span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">CheckIP</span><span class="params">(<span class="keyword">char</span> *ip)</span> </span>&#123;  </span><br><span class="line">	cregex expression = cregex::compile(<span class="string">"(25[0-4]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[1-9])[.](25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])[.](25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])[.](25[0-4]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[1-9])"</span>);   </span><br><span class="line">	<span class="keyword">return</span> regex_match(ip, expression);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="4-udp如何实现可靠连接"><a href="#4-udp如何实现可靠连接" class="headerlink" title="4. udp如何实现可靠连接"></a>4. udp如何实现可靠连接</h3><hr>
-<p>在应用层参照TCP实现超时重传、有序接受、应答确认、滑动窗口、流量控制等功能。</p>
-<p>现已实现的程序有RUDP、RTP、UDT。</p>
-<hr>
-<h3 id="5-MySQL-查询以135开头的手机号"><a href="#5-MySQL-查询以135开头的手机号" class="headerlink" title="5.MySQL 查询以135开头的手机号"></a>5.MySQL 查询以135开头的手机号</h3><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from test where shouji like &#39;135%&#39;;</span><br></pre></td></tr></table></figure>
-
-
-
-</div></article></div><nav class="pagination is-centered mt-4" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/page/0/">Previous</a></div><div class="pagination-next"><a href="/page/2/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="" src="/img/avatar.png" alt="Junyu Bian"></figure><p class="title is-size-4 is-block line-height-inherit">Junyu Bian</p><p class="is-size-6 is-block">Student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>New York</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">16</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/JYBian" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/JYBian"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"><span class="level-start"><span class="level-item">知识点</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-31T11:32:21.000Z">2020-08-31</time></p><p class="title is-6"><a class="link-muted" href="/2020/08/31/2020-08-31-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">操作系统知识点总结</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-31T08:40:10.000Z">2020-08-31</time></p><p class="title is-6"><a class="link-muted" href="/2020/08/31/2020-08-31-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">计算机网络知识点总结</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-23T14:54:16.000Z">2020-07-23</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/23/2020-07-23-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86-6/">知识点整理-6</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-17T11:28:00.000Z">2020-05-17</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/17/2020-05-17-SWAP-Function/">SWAP Function</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Algorithm/">Algorithm</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-16T01:39:00.000Z">2020-05-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/16/2020-05-16-emplace_back-in-C++/">EMPLACE_BACK in C++</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Algorithm/">Algorithm</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/08/"><span class="level-start"><span class="level-item">August 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">July 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">April 2020</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Algorithm/"><span class="tag">Algorithm</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag is-grey-lightest">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Database/"><span class="tag">Database</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Django/"><span class="tag">Django</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web/"><span class="tag">Web</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="tag">操作系统</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B5%8B%E8%AF%95/"><span class="tag">测试</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="tag">计算机网络</span><span class="tag is-grey-lightest">6</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/%E7%AC%94%E8%AE%B0.png" alt="笔记" height="28"></a><p class="size-small"><span>&copy; 2020 Junyu Bian</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination is-centered mt-4" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/page/0/">Previous</a></div><div class="pagination-next"><a href="/page/2/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="" src="/img/avatar.png" alt="Junyu Bian"></figure><p class="title is-size-4 is-block line-height-inherit">Junyu Bian</p><p class="is-size-6 is-block">Student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>New York</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">17</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/JYBian" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/JYBian"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"><span class="level-start"><span class="level-item">知识点</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-09-01T09:22:16.000Z">2020-09-01</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/01/2020-09-01-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">数据库知识点总结</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-31T11:32:21.000Z">2020-08-31</time></p><p class="title is-6"><a class="link-muted" href="/2020/08/31/2020-08-31-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">操作系统知识点总结</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-08-31T08:40:10.000Z">2020-08-31</time></p><p class="title is-6"><a class="link-muted" href="/2020/08/31/2020-08-31-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">计算机网络知识点总结</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-23T14:54:16.000Z">2020-07-23</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/23/2020-07-23-%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86-6/">知识点整理-6</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-17T11:28:00.000Z">2020-05-17</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/17/2020-05-17-SWAP-Function/">SWAP Function</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Algorithm/">Algorithm</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/09/"><span class="level-start"><span class="level-item">September 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/08/"><span class="level-start"><span class="level-item">August 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">July 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">April 2020</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Algorithm/"><span class="tag">Algorithm</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag is-grey-lightest">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Database/"><span class="tag">Database</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Django/"><span class="tag">Django</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web/"><span class="tag">Web</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="tag">操作系统</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B5%8B%E8%AF%95/"><span class="tag">测试</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="tag">计算机网络</span><span class="tag is-grey-lightest">6</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/%E7%AC%94%E8%AE%B0.png" alt="笔记" height="28"></a><p class="size-small"><span>&copy; 2020 Junyu Bian</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
             site: {
                 url: 'http://yoursite.com',
                 external_link: {"enable":true,"exclude":[]}
