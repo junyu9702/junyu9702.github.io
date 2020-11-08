@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Linux知识点总结 - 笔记</title><meta description="1. find命令  查找指定文件名文件（不区分大小写）：  1find -iname &amp;quot;ProgramToFind.java&amp;quot;   对找到的文件执行某命令  1find -iname &amp;quot;ProgramToOperate.java&amp;quot; -exec md5sum &amp;amp;#123;&amp;amp;#125; \;   查找home目录下所有空文件  1find ~ -empty"><meta property="og:type" content="blog"><meta property="og:title" content="Linux知识点总结"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="笔记"><meta property="og:description" content="1. find命令  查找指定文件名文件（不区分大小写）：  1find -iname &amp;quot;ProgramToFind.java&amp;quot;   对找到的文件执行某命令  1find -iname &amp;quot;ProgramToOperate.java&amp;quot; -exec md5sum &amp;amp;#123;&amp;amp;#125; \;   查找home目录下所有空文件  1find ~ -empty"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2020-09-28T14:43:19.000Z"><meta property="article:modified_time" content="2020-09-28T14:50:09.506Z"><meta property="article:author" content="Junyu Bian"><meta property="article:tag" content="Linux"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2020/09/28/2020-09-28-Linux%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"},"headline":"笔记","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2020-09-28T14:43:19.000Z","dateModified":"2020-09-28T14:50:09.506Z","author":{"@type":"Person","name":"Junyu Bian"},"description":"1. find命令  查找指定文件名文件（不区分大小写）：  1find -iname &quot;ProgramToFind.java&quot;   对找到的文件执行某命令  1find -iname &quot;ProgramToOperate.java&quot; -exec md5sum &amp;#123;&amp;#125; \\;   查找home目录下所有空文件  1find ~ -empty"}</script><link rel="canonical" href="http://yoursite.com/2020/09/28/2020-09-28-Linux%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"><link rel="icon" href="/img/%E8%BE%B9.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/%E7%AC%94%E8%AE%B0.png" alt="笔记" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-09-28T14:43:19.000Z" title="2020-09-28T14:43:19.000Z">2020-09-28</time><span class="level-item"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></span><span class="level-item">12 minutes read (About 1791 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Linux知识点总结</h1><div class="content"><h3 id="1-find命令"><a href="#1-find命令" class="headerlink" title="1. find命令"></a>1. find命令</h3><hr>
+<ol>
+<li>查找指定文件名文件（不区分大小写）：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -iname "ProgramToFind.java"</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>对找到的文件执行某命令</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -iname "ProgramToOperate.java" -exec md5sum &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>查找home目录下所有空文件</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -empty</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<ol start="4">
+<li>在/home下找到大小超过3MB的文件</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home -type f -size +3072k</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h3 id="2-static和const关键字"><a href="#2-static和const关键字" class="headerlink" title="2. static和const关键字"></a>2. static和const关键字</h3><hr>
+<p>static：存储在静态存储区，未初始化时自动初始化为0：</p>
+<ol>
+<li>局部变量：<ol>
+<li>变为静态局部变量；</li>
+<li>作用域仍为局部作用域；</li>
+<li>离开作用域仍驻留在内存中，但不可访问；</li>
+</ol>
+</li>
+<li>全局变量：<ol>
+<li>变为全局静态变量；</li>
+<li>在声明的文件之外不可见；</li>
+</ol>
+</li>
+<li>成员变量：<ol>
+<li>变为类的全局变量，被类的对象共享，包括派生类的对象；</li>
+<li>必须在类外进行初始化，如int base::var = 10;，但可以用const修饰static数据成员，从而在类内初始化；</li>
+</ol>
+</li>
+<li>成员函数：<ol>
+<li>使得成员函数为所有对象共享，不含this指针；</li>
+<li>可以独立访问，不需要创建实例，如base::func(3, 5);</li>
+<li>不可直接引用类的非静态成员，但是可以引用静态成员；</li>
+<li>不可同时用const和static修饰成员函数（const含this指针，static不含，冲突）；</li>
+</ol>
+</li>
+</ol>
+<p>const：</p>
+<ol>
+<li>表明变量不可修改；</li>
+<li>限定成员函数不可修改任何数据成员；</li>
+<li>const与指针：<ol>
+<li>const char *p：指向的内容不能改变；</li>
+<li>char * const p：将p声明为常指针，地址不能变，但是内容可变。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="3-C-的内存分区"><a href="#3-C-的内存分区" class="headerlink" title="3. C++的内存分区"></a>3. C++的内存分区</h3><hr>
+<ol>
+<li>栈区（stack）：主要存放函数参数以及局部变量，由系统自动分配释放；</li>
+<li>堆区（heap）：用户通过malloc/new手动申请释放，分配类似链表；</li>
+<li>全局/静态区：存放全局变量、静态变量；</li>
+<li>字符串常量区：字符串常量；</li>
+<li>代码区：程序的二进制代码。</li>
+</ol>
+<hr>
+<h3 id="4-STL容器"><a href="#4-STL容器" class="headerlink" title="4. STL容器"></a>4. STL容器</h3><hr>
+<p>底层数据结构：</p>
+<ol>
+<li>vector：数组；</li>
+<li>map、multimap：红黑树；</li>
+<li>unordered_map、unordered_nultimap：哈希表。</li>
+</ol>
+<hr>
+<h3 id="5-内存泄漏"><a href="#5-内存泄漏" class="headerlink" title="5. 内存泄漏"></a>5. 内存泄漏</h3><hr>
+<ol>
+<li>一般为堆内存泄漏，即程序在运行中动态申请的内存空间不使用后，未及时释放；</li>
+<li>解决：<ol>
+<li>良好编程习惯；</li>
+<li>重载new和delete，以链表形式自动管理分配的内存；</li>
+<li>使用智能指针。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="6-32位、64位系统中，常用内置数据类型所占字节数"><a href="#6-32位、64位系统中，常用内置数据类型所占字节数" class="headerlink" title="6. 32位、64位系统中，常用内置数据类型所占字节数"></a>6. 32位、64位系统中，常用内置数据类型所占字节数</h3><hr>
+<ol>
+<li>32位：<ol>
+<li>char：1字节；</li>
+<li>指针变量：4字节；</li>
+<li>short int：2字节；</li>
+<li>int：4字节；</li>
+<li>unsigned int：4字节；</li>
+<li>float：4字节；</li>
+<li>double：8字节；</li>
+<li>long：4字节；</li>
+<li>unsigned long：4字节；</li>
+<li>long long：8字节；</li>
+</ol>
+</li>
+<li>64位：<ol>
+<li>char：1字节；</li>
+<li>指针变量：8字节；</li>
+<li>short int：2字节；</li>
+<li>int：4字节；</li>
+<li>unsigned int：4字节；</li>
+<li>float：4字节；</li>
+<li>double：8字节；</li>
+<li>long：8字节；</li>
+<li>unsigned long：8字节；</li>
+<li>long long：8字节。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="7-inline、volatile关键字"><a href="#7-inline、volatile关键字" class="headerlink" title="7. inline、volatile关键字"></a>7. inline、volatile关键字</h3><hr>
+<ol>
+<li>inline：解决频繁调用小函数大量消耗栈空间的问题；</li>
+<li>volatile：表明类型变量可悲更改，不再优化，需要从如内存中重新读取。</li>
+</ol>
+<hr>
+<h3 id="8-深拷贝与浅拷贝"><a href="#8-深拷贝与浅拷贝" class="headerlink" title="8. 深拷贝与浅拷贝"></a>8. 深拷贝与浅拷贝</h3><hr>
+<p>拷贝函数使用场景：</p>
+<ol>
+<li>一个对象以值的方式传入函数体；</li>
+<li>一个对象以值的方式从函数返回；</li>
+<li>一个对象需通过另一个对象进行初始化；</li>
+</ol>
+<p>区别：</p>
+<ol>
+<li>浅拷贝：只是增加一个指针指向已存在的内存地址；</li>
+<li>深拷贝：增加一个指针，并且申请一个新的内存用于存放复制的对象。</li>
+</ol>
+<hr>
+<h3 id="9-派生类构造-析构函数调用顺序"><a href="#9-派生类构造-析构函数调用顺序" class="headerlink" title="9. 派生类构造/析构函数调用顺序"></a>9. 派生类构造/析构函数调用顺序</h3><hr>
+<ol>
+<li>构造函数：先基后派；</li>
+<li>析构函数：先派后基。</li>
+</ol>
+<hr>
+<h3 id="10-数据成员初始化顺序"><a href="#10-数据成员初始化顺序" class="headerlink" title="10. 数据成员初始化顺序"></a>10. 数据成员初始化顺序</h3><hr>
+<p>顺序：</p>
+<ol>
+<li>基类的静态变量或全局变量；</li>
+<li>派生类的静态变量或全局变量；</li>
+<li>基类的成员变量；</li>
+<li>派生类的成员变量。</li>
+</ol>
+<hr>
+<h3 id="11-static-cast-dynamic-cast-const-cast-reinpreter-cast区别"><a href="#11-static-cast-dynamic-cast-const-cast-reinpreter-cast区别" class="headerlink" title="11. static_cast, dynamic_cast, const_cast, reinpreter_cast区别"></a>11. static_cast, dynamic_cast, const_cast, reinpreter_cast区别</h3><hr>
+<p>static_cast与dynamic_cast：</p>
+<ol>
+<li>发生时间不同，一个是static编译时，一个是runtime运行时；</li>
+<li>static_cast为强制类型转换，不提供运行时的检查；</li>
+<li>dynamic_cast用于转换指针和引用，不可用于转换对象，主要用于类层次间的上行和下行转换：<ol>
+<li>上行转换：B继承自A，由B转换为A；</li>
+<li>下行转换：B继承自A，A转换为B；</li>
+</ol>
+</li>
+<li>上行转换时，static_cast和dynamic_cast效果相同，下行转换时，dynamic_cast具有类型检查，更安全。</li>
+</ol>
+<hr>
+<h3 id="12-定义一个空类-编译器会做什么"><a href="#12-定义一个空类-编译器会做什么" class="headerlink" title="12. 定义一个空类 编译器会做什么"></a>12. 定义一个空类 编译器会做什么</h3><hr>
+<ol>
+<li>当用到相关函数时，编译器会去自动生成：默认构造函数、默认拷贝构造函数、默认拷贝赋值操作符、默认析构函数；</li>
+<li>所有自动生成的函数都是inline和public的。</li>
+</ol>
+<hr>
+<h3 id="13-哪些函数不能成为虚函数"><a href="#13-哪些函数不能成为虚函数" class="headerlink" title="13. 哪些函数不能成为虚函数"></a>13. 哪些函数不能成为虚函数</h3><hr>
+<ol>
+<li>构造函数：假如子类继承基类构造函数，则子类对象将使用基类构造函数构造，而积累的构造函数并不知道自类的成员，不符合语义，且，多态是通过基类指针指向子类对象实现多态的，在对象构造之前，并没有对象产生，因此无法使用多态特性，是矛盾的；</li>
+<li>内联成员函数：内联函数在编译时展开，而虚函数是在运行时绑定的，两者相违背；</li>
+<li>静态成员函数：在编译时确定，无法动态绑定，不支持多态。</li>
+</ol>
+<hr>
+<h3 id="14-内联函数与宏定义的区别"><a href="#14-内联函数与宏定义的区别" class="headerlink" title="14. 内联函数与宏定义的区别"></a>14. 内联函数与宏定义的区别</h3><hr>
+<ol>
+<li>宏定义在于处理时把所有宏名用宏体替换，内联函数在编译时进行代码插入、展开、省去调用的开销；</li>
+<li>宏定义没有类型检查，内联函数满足函数的性质，如有返回值、参数列表等。</li>
+</ol>
+<hr>
+<h3 id="15-左值引用和右值引用"><a href="#15-左值引用和右值引用" class="headerlink" title="15. 左值引用和右值引用"></a>15. 左值引用和右值引用</h3><hr>
+<ol>
+<li><p>左值引用要求右边的值必须能够取地址，如果不能取地址，可以使用常引用；</p>
+<ol>
+<li><p>例：<code>const int &amp;var = 10;</code>等价于</p>
+<ol>
+<li><pre><code class="c++"><span class="keyword">const</span> <span class="keyword">int</span> temp = <span class="number">10</span>;
+<span class="keyword">const</span> <span class="keyword">int</span> &amp;var = temp;
+&lt;!--￼<span class="number">4</span>--&gt;</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>注意：返回一个从pos开始，包含pos的n个字符，pos默认值为0，n默认值为s.size()-pos。</p>
+</li>
+</ol>
+</div><div class="article-tags size-small is-uppercase mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Linux/">Linux</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/11/08/2020-11-08-Diff-Array/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Diff Array</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/09/15/2020-09-15-LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93-Recursion+Backtrack/"><span class="level-item">LeetCode题目总结-Recursion+Backtrack</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="" src="/img/avatar.png" alt="Junyu Bian"></figure><p class="title is-size-4 is-block line-height-inherit">Junyu Bian</p><p class="is-size-6 is-block">Student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>New York</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">29</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/JYBian" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/JYBian"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/LeetCode/"><span class="level-start"><span class="level-item">LeetCode</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"><span class="level-start"><span class="level-item">知识点</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">Recent</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-11-08T07:19:00.000Z">2020-11-08</time></p><p class="title is-6"><a class="link-muted" href="/2020/11/08/2020-11-08-Diff-Array/">Diff Array</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Algorithm/">Algorithm</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-09-28T14:43:19.000Z">2020-09-28</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/28/2020-09-28-Linux%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">Linux知识点总结</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/">知识点</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-09-15T14:12:19.000Z">2020-09-15</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/15/2020-09-15-LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93-Recursion+Backtrack/">LeetCode题目总结-Recursion+Backtrack</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/LeetCode/">LeetCode</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-09-12T13:32:19.000Z">2020-09-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/12/2020-09-12-LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93-Queue+TopologicalSort/">LeetCode题目总结-Queue+TopologicalSort</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/LeetCode/">LeetCode</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-09-12T13:32:19.000Z">2020-09-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/09/12/2020-09-12-LeetCode%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93-Graph/">LeetCode题目总结-Graph</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/LeetCode/">LeetCode</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/11/"><span class="level-start"><span class="level-item">November 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/09/"><span class="level-start"><span class="level-item">September 2020</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/08/"><span class="level-start"><span class="level-item">August 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">July 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">April 2020</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Algorithm/"><span class="tag">Algorithm</span><span class="tag is-grey-lightest">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag is-grey-lightest">23</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Database/"><span class="tag">Database</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Django/"><span class="tag">Django</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web/"><span class="tag">Web</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="tag">操作系统</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B5%8B%E8%AF%95/"><span class="tag">测试</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag is-grey-lightest">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="tag">计算机网络</span><span class="tag is-grey-lightest">6</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/%E7%AC%94%E8%AE%B0.png" alt="笔记" height="28"></a><p class="size-small"><span>&copy; 2020 Junyu Bian</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://yoursite.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to Top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
